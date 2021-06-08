@@ -8,3 +8,5 @@ selenium==3.141.0
 plotly==4.14.3
 requests==2.25.1
 streamlit==0.82.0
+graphviz==0.16
+pygraphviz==1.7
