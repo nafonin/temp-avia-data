@@ -1,0 +1,381 @@
+;airport;lat;lon;city;country;name
+0;KTEB;40.849722222222226;-74.06083333333333;Teterboro;United States of America;Teterboro Airport
+1;KORD;41.97944444444445;-87.90444444444445;Chicago;United States of America;Chicago-O'Hare International Airport
+2;KIAD;38.94444444444444;-77.45555555555556;Washington;United States of America;Dulles International Airport
+3;KDFW;32.896388888888886;-97.0375;Fort Worth;United States of America;Dallas / Fort Worth International Airport
+4;KDAL;32.846944444444446;-96.85166666666666;Dallas;United States of America;Dallas Love Field
+5;KMDW;41.78583333333333;-87.75222222222222;Chicago;United States of America;Chicago Midway Airport
+6;KHPN;41.066944444444445;-73.7075;White Plains;United States of America;Westchester County Airport
+7;KPHL;39.871944444444445;-75.24111111111111;Philadelphia;United States of America;Philadelphia International Airport
+8;KLAS;36.08027777777778;-115.15222222222222;Las Vegas;United States of America;McCarran Inernational Airportl
+9;KPWK;42.11416666666667;-87.90166666666667;Chicago;United States of America;Chicago Executive Airport
+10;KCLT;35.21388888888889;-80.94305555555556;Charlotte;United States of America;Charlotte / Douglas International Airport
+11;KHOU;29.64527777777778;-95.27888888888889;Houston, Hobby Airport;United States of America;
+12;KAPA;39.57;-104.84916666666666;Denver;United States of America;Centennial Airport
+13;KIND;39.717222222222226;-86.29416666666667;Indianapolis;United States of America;Indianapolis International Airport
+14;KATL;33.640277777777776;-84.42694444444444;Atlanta;United States of America;Hartsfield-Jackson Atlanta International Airport
+15;KMSP;44.88027777777778;-93.21666666666667;Minneapolis;United States of America;Minneapolis-St Paul International Airport
+16;KRDU;35.8775;-78.78722222222223;Raleigh/Durham;United States of America;urham / Raleigh-Durham International Airport
+17;KADS;32.968611111111116;-96.83638888888889;Dallas;United States of America;Addison Airport
+18;KPDK;33.87555555555556;-84.30194444444444;Atlanta;United States of America;De Kalb/Peachtree
+19;KBWI;39.17527777777777;-76.66833333333334;Baltimore;United States of America;Baltimore/Washington International Thurgood Marshall Airport
+20;KSUS;38.66222222222222;-90.65194444444445;St Louis;United States of America;Spirit Of St Louis Airport
+21;KAUS;30.194444444444446;-97.66972222222223;Austin;United States of America;Bergstrom
+22;KDEN;39.858333333333334;-104.66694444444445;Denver;United States of America;Denver International Airport
+23;KFTW;32.819722222222225;-97.36222222222221;Fort Worthacham International Airport;United States of America;
+24;KMKC;39.1275;-94.59888888888888;Kansas City;United States of America;Downtown
+25;KBOS;42.36416666666667;-71.005;Boston;United States of America;Logan International Airport
+26;KEWR;40.69222222222222;-74.16861111111112;Newark;United States of America;Newark Liberty International Airport
+27;KLUK;39.10333333333333;-84.41861111111112;Cincinnati;United States of America;Cincinnati Municipal Airport Lunken Field
+28;KLAX;33.942499999999995;-118.40805555555556;Los Angeles;United States of America;Los Angeles International Airport
+29;KIAH;29.980277777777776;-95.33972222222222;Houston, Houston Intercontinental Airport;United States of America;
+30;KSAT;29.533611111111114;-98.46972222222223;San Antonio;United States of America;San Antonio International Airport
+31;KBED;42.469722222222224;-71.28888888888889;Bedford;United States of America;Hanscom Field
+32;KJFK;40.63972222222222;-73.77888888888889;New York;United States of America;John F. Kennedy International Airport
+33;KSDF;38.174166666666665;-85.7363888888889;Louisvilie;United States of America;Standiford Field
+34;KPHX;33.43416666666666;-112.00805555555556;Phoenix;United States of America;Sky Harbor International Airport
+35;KBNA;36.12444444444444;-86.67805555555556;Nashville;United States of America;Nashville International Airport
+36;KTPA;27.975277777777777;-82.53305555555555;Tampa;United States of America;Tampa International Airport
+37;KMMU;40.79944444444444;-74.415;Morristown;United States of America;Morristown Municipal Airport
+38;KCMH;39.99777777777778;-82.89166666666668;Columbus;United States of America;Port Columbus International Airport
+39;KSDL;62.528055555555554;-17.44388888888889;Scottsdale;United States of America;Scottsdale Airport
+40;KMSN;43.13972222222222;-89.33749999999999;Madison;United States of America;Dane County Regional-Truax Field
+41;KSTL;38.7475;-90.35972222222222;St Louis;United States of America;Lambert-St Louis International Airport
+42;KMCO;28.42888888888889;-81.31583333333333;Orlando;United States of America;Orlando International Airport
+43;KFLL;26.072499999999998;-80.1525;Fort Lauderdale;United States of America;Fort Lauderdale / Hollywood International Airport
+44;KORL;28.54527777777778;-81.33277777777778;Orlando;United States of America;Herndon / Orlando Executive Airport
+45;KSFO;37.61888888888889;-122.37472222222222;San Francisco;United States of America;San Francisco International Airport
+46;KOSH;44.025;-88.55138888888888;Oshkosh;United States of America;Wittman Regional Airport
+47;CYYZ;43.67722222222222;-79.63055555555555;Toronto;Canada;Pearson International
+48;KMKE;42.947222222222216;-87.8963888888889;Milwaukee;United States of America;General Mitchell International Airport
+49;KDPA;41.907777777777774;-88.24861111111112;Chicago;United States of America;West Chicago, Dupage Airport
+50;KBFI;47.52972222222222;-122.30194444444444;Seattle;United States of America;Boeing Field International
+51;KPIE;27.910555555555554;-82.68722222222223;St Petersburg;United States of America;Clearwater, St Petersburg / Clearwater International Airport / 
+52;KOPF;25.90694444444444;-80.27833333333334;Miami;United States of America;Opa Locka Airport
+53;KLGA;40.77722222222222;-73.87249999999999;New York;United States of America;La Guardia Airport
+54;KISM;28.289722222222224;-81.43694444444445;Kissimmee;United States of America;Municipal
+55;KVNY;34.209722222222226;-118.49;Los Angeles;United States of America;Van Nuys
+56;KSJC;37.361666666666665;-121.92888888888889;San Jose;United States of America;San Jose International Airport
+57;KTTN;40.276666666666664;-74.81333333333333;Philadelphia;United States of America;Trenton-Mereer County Airport
+58;KMIA;25.793055555555558;-80.29055555555556;Miami;United States of America;Miami International Airport
+59;KOAK;37.721111111111114;-122.22055555555556;Oakland;United States of America;Oakland Metropolitan Oakland International Airport
+60;KDCA;38.85194444444445;-77.0375;Washington;United States of America;Ronald Reagan National Airport
+61;KBUF;42.94027777777777;-78.73194444444445;Buffalo;United States of America;Buffalo Niagara International Airport
+62;KCOS;38.80555555555555;-104.7;Colorado Springs;United States of America;City Of Colorado Springs Municipal Airprot
+63;KGRR;42.880833333333335;-85.52277777777778;Grand Rapids;United States of America;Kent County International Airport
+64;KJYO;39.07805555555556;-77.55805555555555;Leesburg;United States of America;Godfrey, VA / 
+65;KSNA;33.675555555555555;-117.86805555555554;Santa Ana;United States of America;John Wayne Airport-Orange County Airport
+66;KPNE;40.081944444444446;-75.01055555555556;Philadelphia;United States of America;North Philadelphia
+67;KABE;40.651944444444446;-75.44083333333333;Allentown-Bethlehem-Easton;United States of America;Lehigh Valley International Airport
+68;KFXE;26.197222222222223;-80.17055555555557;Fort Lauderdale;United States of America;Fort Lauderdale Executive Airport
+69;KBJC;39.90888888888889;-105.11722222222221;Broomfield;United States of America;Jeffco
+70;EHAM;52.308611111111105;4.763888888888889;Amsterdam;Netherlands;Schiphol Airport
+71;LFPB;48.96944444444445;2.441388888888889;Paris;France;Le Bourget
+72;KDTW;42.21222222222222;-83.35333333333332;Detroit;United States of America;Wayne County
+73;KOMA;41.302499999999995;-95.89361111111111;Omaha;United States of America;Eppley Airfield
+74;EDDF;50.02638888888889;8.543055555555556;Frankfurt;Germany;International
+75;KRYY;34.01305555555555;-84.59694444444445;Atlanta;United States of America;Cobb County Airport, McCollum Field
+76;KFTY;33.77916666666667;-84.5213888888889;Atlanta;United States of America;Fulton County Airport-Brown Field
+77;KPDX;45.58861111111111;-122.5975;Portland;United States of America;Portland International Airport
+78;LSZH;47.46472222222223;8.549166666666666;Zurich;Switzerland;Kloten
+79;KPBI;26.68305555555556;-80.09555555555555;West Palm Beach;United States of America;West Palm Beachlm Beach International Airport
+80;KGRB;44.485;-88.12944444444443;Green Bay;United States of America;Austin Straubel International Airport
+81;KPTK;42.66694444444444;-83.35;Pontiac;United States of America;Oakland-Pontiac Airport
+82;KMDT;40.19333333333333;-76.76333333333334;Harrisburg;United States of America;Harrisburg International Airport
+83;KLDJ;40.6175;-74.24472222222222;Linden;United States of America;
+84;KSAN;32.733333333333334;-117.18944444444445;San Diego;United States of America;San Diego International-Lindbergh Field
+85;EDDM;48.353611111111114;11.785833333333333;Munich;Germany;Franz Josef Strauss
+86;KLNS;40.12166666666667;-76.2961111111111;Lancaster;United States of America;Lancaster Airport
+87;KTYS;35.81222222222222;-83.99277777777777;Knoxville;United States of America;Mc Ghee Tyson Airport
+88;EBBR;50.90222222222222;4.498611111111111;Brussels;Belgium;National
+89;KROC;43.118611111111115;-77.67222222222223;Rochester;United States of America;Greater Rochester International Airport
+90;KLNK;40.850833333333334;-96.75916666666667;Lincoln;United States of America;Lincoln Municipal Airport
+91;KIXD;25.43888888888889;-81.73416666666667;Olathe;United States of America;New Century Aircenter
+92;KHWO;26.00138888888889;-80.24027777777778;Hollywood, North Perry Airport;United States of America;
+93;KISP;40.794999999999995;-73.1;Islip;United States of America;Long Island Macarthur
+94;KLOT;41.60638888888889;-88.08305555555555;Chicago Nexrad;United States of America;
+95;KMCI;39.2975;-94.71388888888889;Kansas City;United States of America;International
+96;KTUL;36.19833333333333;-95.88805555555557;Tulsa;United States of America;Tulsa International Airport
+97;KHND;35.97277777777778;-115.13444444444445;Las Vegas;United States of America;Henderson Executive Airport
+98;LOWW;48.11027777777778;16.56972222222222;Vienna;Austria;Schwechat
+99;KSFB;28.77777777777778;-81.2375;Orlando;United States of America;Sanford International Airport
+100;EGLL;51.4775;-0.4613888888888889;London;United Kingdom;Heathrow Airport
+101;LEBL;41.29694444444444;2.0783333333333336;Barcelona;Spain;Le Prat
+102;KLOU;38.22777777777778;-85.66361111111112;Louisville;United States of America;Bowman Field
+103;KMGE;33.915277777777774;-84.51611111111112;Marietta;United States of America;Dobbins AFB
+104;KABQ;35.04;-106.60916666666667;Albuquerque;United States of America;International Airport
+105;KLZU;33.97805555555556;-83.9625;Lawrenceville;United States of America;Gwinnett County
+106;EDDL;51.28944444444444;6.766666666666667;Dusseldorf;Germany;Dusseldorf International
+107;EGLF;51.27583333333333;-0.7761111111111112;Farnborough;United Kingdom;
+108;EIDW;53.42111111111111;-6.27;Dublin;Ireland;
+109;KSWF;41.50388888888889;-74.10472222222222;Newburgh/Poughkeepsie;United States of America;oughkeepsie / Stewart
+110;LIMC;45.63138888888889;8.723055555555556;Milan;Italy;Malpensa Airport
+111;KIWA;33.30777777777777;-111.655;Phoenix;United States of America;Mesa Gateway
+112;KRFD;42.195277777777775;-89.09722222222221;Rockford;United States of America;Greater Rockford Airport
+113;EDDK;50.865833333333335;7.1425;Cologne;Germany;Bonn / Konrad Adenauer
+114;KCGF;41.565;-81.4863888888889;Cleveland;United States of America;Cuyahoga County Airport
+115;KCLL;30.58833333333333;-96.36361111111111;College Station;United States of America;Easterwood Field
+116;EDDS;48.689722222222215;9.221944444444444;Stuttgart;Germany;Echterdingen
+117;KBCT;26.378333333333334;-80.10749999999999;Boca Raton;United States of America;Public
+118;KCRQ;33.128055555555555;-117.28;Carlsbad;United States of America;Mcclellan-Palomar Airport
+119;KTUS;32.11611111111111;-110.9413888888889;Tucson;United States of America;Tucson International Airport
+120;KSAF;35.61666666666667;-106.08805555555556;Santa Fe;United States of America;Santa Fe County Municipal Airport
+121;KROA;37.32555555555556;-79.97555555555556;Roanoke;United States of America;Roanoke Regional Airport
+122;KJVL;42.62027777777778;-89.04166666666667;Janesville;United States of America;Rock Co. / 
+123;KSGF;37.245555555555555;-93.38861111111112;Springfield;United States of America;Springfield-Branson Regional Airport
+124;KLGB;33.8175;-118.15138888888889;Long Beach;United States of America;Long Beach Municipal Airport
+125;EGKK;51.14805555555556;-0.19027777777777777;London;United Kingdom;Gatwick Airport
+126;EDDB;52.36666666666667;13.503333333333334;Berlin;Germany;Brandenburg
+127;ELLX;49.62638888888889;6.211388888888889;Luxembourg;Luxembourg;Luxembourg
+128;KHSV;34.63722222222222;-86.775;Huntsville, Huntsville International;United States of America;Jones Field / 
+129;KADW;38.81055555555555;-76.86694444444444;Camp Springs;United States of America;Andrews AFB
+130;KOKC;35.393055555555556;-97.60055555555554;Oklahoma City;United States of America;Will Rogers World Airport
+131;EGCC;53.353611111111114;-2.274722222222222;Manchester;United Kingdom;Ringway
+132;KECP;30.341666666666665;-85.79722222222222;Panama City;United States of America;Norht West Florida Beaches International Airport
+133;KDVT;33.41166666666666;-112.45694444444445;Phoenix;United States of America;Phoenix-Deer Valley Municipal Airport
+134;KLAL;27.98888888888889;-82.01861111111111;Lakeland;United States of America;Lakeland Regional
+135;KAGC;40.35444444444445;-79.93027777777779;Pittsburgh;United States of America;Allegheny County Airport
+136;KFWA;40.97833333333333;-85.19527777777778;Fort Wayne;United States of America;Fort Wayne International Airport
+137;EDDH;53.63027777777778;9.988055555555555;Hamburg;Germany;Fuhlsbuettel
+138;EKCH;55.617777777777775;12.655833333333334;Copenhagen;Denmark;Kastrup
+139;KBAK;40.4675;-50.04666666666667;Columbus/Balkalar;United States of America;alkalar / Columbus Municipal Airport
+140;PANC;61.174166666666665;-149.9961111111111;Anchorage;United States of America;Anchorage International Airport
+141;KIWS;29.818055555555556;-95.6725;W. Houston;United States of America;Lakeside / 
+142;KRNO;39.498333333333335;-119.76805555555555;Reno;United States of America;Reno Tahoe International Airport
+143;KAPC;38.213055555555556;-122.28055555555555;Napa;United States of America;Napa County Airport
+144;LKPR;50.100833333333334;14.26;Prague;Czech Republic;Ruzyne
+145;KPSP;33.82944444444445;-116.50666666666666;Palm Springs;United States of America;Palm Springs Regional Airport
+146;KBOI;43.564166666666665;-116.22277777777778;Boise;United States of America;Boise Air Terminal (Gowen Field)
+147;KDTS;30.4;-86.4713888888889;Destin, Destin-Ft Walton Beach Airport, FL;United States of America;
+148;EGKB;51.33083333333334;0.0325;London;United Kingdom;Biggin Hill
+149;KDWH;30.06361111111111;-95.55416666666666;Houston;United States of America;David Wayne Hooks Memorial Airport
+150;KONT;34.05583333333333;-117.60111111111111;Ontario;United States of America;Ontario International Airport
+151;KFLD;43.77111111111111;-88.48833333333333;Fond Du Lac;United States of America;Fond Du Lac County Airport
+152;BIKF;63.985;-22.605555555555558;Reykjavik;Iceland;Keflavik International
+153;KEFD;29.607222222222223;-95.15861111111111;Houston;United States of America;Ellington Fieid
+154;KHGR;39.70777777777778;-77.72944444444444;Hagerstownshington County Regional Airport, MD;United States of America;
+155;KERI;42.081944444444446;-80.17611111111111;Erie;United States of America;Erie International Airport
+156;CYVR;49.19499999999999;-123.18194444444445;Vancouver;Canada;Vancouver International
+157;KDAB;29.18;-81.05805555555555;Daytona Beach;United States of America;Daytona Beach Regional Airport
+158;KALB;42.74805555555556;-73.80277777777778;Albany;United States of America;Albany County Airport
+159;KBMG;39.14611111111111;-86.61666666666666;Bloomington;United States of America;Monroe County Airport
+160;KXNA;36.28194444444444;-94.30694444444444;Fayetteville;United States of America;Northwest Arkansas Region
+161;KSLC;40.788333333333334;-111.9775;Salt Lake City;United States of America;Salt Lake City International Airport
+162;ESSA;59.651944444444446;17.91861111111111;Stockholm;Sweden;Arlanda
+163;KIAG;43.10722222222223;-78.94611111111111;Niagara Falls;United States of America;Niagara Falls International Airport
+164;KSMF;38.695277777777775;-121.59055555555555;Sacramento;United States of America;Sacramento International Airport
+165;LIRF;41.812777777777775;12.253055555555555;Rome;Italy;Fiumicino
+166;KSAV;32.1275;-81.20194444444445;Savannah;United States of America;Savannah International Airport
+167;LHBP;47.43666666666666;19.255555555555556;Budapest;Hungary;Ferihegy
+168;KARR;41.77166666666667;-88.47555555555556;Chicago;United States of America;Aurora Municipal Airport
+169;EINN;52.70194444444445;-8.924722222222222;Shannon;Ireland;
+170;KCLW;27.976388888888888;-82.75861111111111;Clearwater;United States of America;Executive
+171;EPWA;52.16555555555556;20.966944444444444;Warsaw;Poland;Frederic Chopin Airport
+172;UUWW;55.59138888888889;37.26138888888889;Moscow;Russian Federation;Vnukovo
+173;KPAE;47.90611111111111;-122.28138888888888;Everett;United States of America;Snohomish County Airport
+174;KLBE;40.27583333333333;-79.40472222222223;Latrobe/Westmorland;United States of America;estmorland / Westmoreland County Airport
+175;CYYC;51.11388888888889;-114.02027777777778;Calgary;Canada;Calgary International Airport
+176;KRVS;36.03972222222222;-95.98472222222222;Tulsa;United States of America;R. Lloyd Jones Jr Airport
+177;KBMI;40.477222222222224;-88.91583333333334;Bloomington;United States of America;Normal / 
+178;KBDR;41.163333333333334;-73.1261111111111;Bridgeport;United States of America;Igor I. Sikorsky Memorial Airport
+179;KORF;36.894444444444446;-76.20111111111112;Norfolk;United States of America;Norfolk International Airport
+180;KPIT;40.49138888888889;-80.23277777777778;Pittsburgh;United States of America;Pittsburgh International Airport
+181;KSTS;38.50888888888889;-122.81277777777777;Santa Rosa;United States of America;Sonoma County Airport
+182;LEMG;36.67361111111111;-4.498888888888889;Malaga;Spain;Pablo Ruiz Picasso
+183;KHYA;41.669444444444444;-70.28027777777778;Hyannis, Barnstable Municipal-Boardman Airport;United States of America;
+184;EDDN;49.49861111111111;11.078055555555554;Nuernberg;Germany;
+185;EFHK;60.32;24.95611111111111;Helsinki;Finland;Vantaa
+186;KOWD;42.190555555555555;-71.17305555555556;Norwood;United States of America;Norwood Memorial Airport
+187;KHIO;45.540277777777774;-122.94972222222222;Portland, Portland-Hillsboro Airport;United States of America;
+188;KUMP;39.93527777777778;-86.045;Indianapolis;United States of America;Metro
+189;KOSU;40.07972222222222;-83.07305555555556;Columbus;United States of America;Ohio State University
+190;LGAV;37.936388888888885;23.944444444444446;Athens;Greece;Athinai / Eleftherios Venizelos International
+191;UUEE;55.97166666666667;37.415;Moscow;Russian Federation;Sheremetyevo
+192;KACK;41.25277777777778;-70.06;Nantucket;United States of America;Nantucket Memorial Airport
+193;EDDV;52.46083333333333;9.685;Hanover;Germany;
+194;KYIP;42.23777777777778;-83.53027777777778;Detroit;United States of America;Willow Run
+195;EBCI;50.45916666666667;4.453611111111111;Brussels;Belgium;Charleroi Brussels South
+196;EDDT;52.559444444444445;13.2875;Berlin;Germany;Tegel
+197;SBGR;-23.432222222222222;-46.469166666666666;Sao Paulo;Brazil;Guarulhos International
+198;LPPT;38.78111111111111;-9.135833333333332;Lisboa/Lisbon;Portugal;isbon / Lisbon Airport
+199;KHVN;41.263888888888886;-72.88694444444445;New Haven, Tweed-New Haven Airport, CT;United States of America;
+200;LIRA;41.799166666666665;12.594722222222222;Rome;Italy;Ciampino
+201;KMHR;38.553888888888885;-121.2975;Sacramento;United States of America;Mather AFB/Mather Field
+202;KFOK;40.843611111111116;-72.63166666666666;Westhampton Beach;United States of America;The Gabreski Airport
+203;KPUB;38.288888888888884;-104.49638888888889;Pueblo;United States of America;Pueblo Memorial Airport
+204;KLVK;37.41361111111111;-121.49138888888889;Livermore;United States of America;Livermore Municipal Airport
+205;LFBO;43.62888888888889;1.363611111111111;Toulouse;France;Blagnac Airport
+206;EGBB;52.453611111111115;-1.7477777777777779;Birmingham;United Kingdom;International
+207;KDXR;41.37166666666667;-73.48222222222222;Danbury;United States of America;Danbury Municipal Airport
+208;ENGM;60.193888888888885;11.100277777777777;Oslo;Norway;Gardermoen
+209;EHRD;51.95722222222223;4.441666666666667;Rotterdam;Netherlands;Zestienhoven
+210;LFBD;44.82833333333333;-0.7155555555555555;Bordeaux;France;Merignac
+211;KMCC;38.6675;-121.40055555555556;Sacramento;United States of America;Mcclellan AFB
+212;EGNX;52.83111111111111;-1.3280555555555555;East Midlands;United Kingdom;Nottingham East Midlands Airport
+213;KCCR;37.98972222222222;-122.05694444444444;Concord;United States of America;Buchanan Field
+214;LIML;45.445277777777775;9.276944444444446;Milan;Italy;Linate
+215;KGNV;29.69;-82.27166666666666;Gainesville;United States of America;Gainesville Regional Airport
+216;KFYV;36.005;-94.17;Fayetteville;United States of America;Municipal (Drake Field)
+217;KLEB;43.626111111111115;-72.30416666666666;White River;United States of America;
+218;OMDB;25.254722222222224;55.36416666666667;Dubai;United Arab Emirates;Dubai International Airport
+219;KSPG;27.765;-82.62694444444443;St Petersburg;United States of America;Whitted Airport
+220;KPIA;40.66416666666667;-89.69333333333334;Peoria;United States of America;Greater Peoria Regional Airport
+221;KCVG;39.04611111111111;-84.66194444444444;Covington;United States of America;Cincinnati / Cincinnati / Northern Kentucky International Airport
+222;KMVY;41.391666666666666;-70.61527777777778;Martha's Vineyard;United States of America;Vineyard Havenrthas Vineyard Airport
+223;KMEM;35.04222222222222;-89.97666666666667;Memphis;United States of America;Memphis International Airport
+224;KFME;39.08527777777778;-76.75916666666667;Fort Meade;United States of America;Tipton AAF
+225;LOWS;47.793055555555554;13.004166666666666;Salzburg;Austria;W.A. Mozart
+226;LIPZ;45.505;12.351666666666667;Venezia;Italy;Tessera
+227;KBLI;48.7925;-122.5375;Bellingham;United States of America;Bellingham International Airport
+228;KRDG;40.37861111111111;-75.96527777777779;Reading;United States of America;Reading Regional Airport
+229;LTBA;40.97666666666667;28.82111111111111;Istanbul;Turkey;Atatürk Airport
+230;KFFZ;33.46083333333333;-111.72805555555556;Mesa;United States of America;Falcon Field, AZ / 
+231;CYHM;43.17305555555555;-79.935;Hamilton;Canada;John C. Munro Hamilton International Airport
+232;LIME;45.67388888888889;9.704166666666666;Milan;Italy;Bergamo - Orio Alserio
+233;EGPH;55.95;-3.3725;Edinburgh;United Kingdom;Turnhouse
+234;EGGD;51.3825;-2.718888888888889;Bristol;United Kingdom;Lulsgate
+235;EBLG;50.63722222222222;5.4430555555555555;Liege;Belgium;Bierset
+236;KHXD;32.224444444444444;80.6975;Delingha;China;Delingha
+237;KPVD;41.723888888888894;-71.42805555555556;Providence;United States of America;Green State Airport
+238;KCEU;34.67222222222222;-82.88583333333334;Clemson;United States of America;Clemson-Oconee County Airport
+239;KBVY;42.58416666666667;-70.91611111111112;Beverly;United States of America;Beverly Municipal Airport
+240;EDNY;47.67111111111111;9.511388888888888;Friedrichshafen;Germany;
+241;KESN;38.80416666666667;-76.06888888888888;Easton;United States of America;Newman Field
+242;KTEX;37.95388888888889;-107.90861111111111;Telluride;United States of America;Regional
+243;KERV;29.976666666666667;-99.08555555555554;Kerrville;United States of America;Municipal Airport
+244;KSPI;39.844166666666666;-89.67777777777778;Springlield;United States of America;Capital Airport
+245;KSAC;38.5125;-121.49333333333334;Sacramento;United States of America;Sacramento Executive Airport
+246;LLBG;32.00944444444445;34.876666666666665;Tel Aviv;Israel;Ben-Gurion International Airport
+247;LFPO;48.72527777777778;2.3594444444444447;Paris;France;Orly
+248;KSJT;31.3575;-100.4961111111111;San Angelo;United States of America;Mathis Fld
+249;KMWC;43.11027777777778;-88.03444444444445;Milwaukee/Timmerman;United States of America;immerman / Lawrence J Timmerman Airport
+250;LFML;43.43555555555555;5.213611111111112;Marseille;France;Marignane
+251;KFNL;40.45194444444445;-105.01138888888889;Fort Collins/Loveland;United States of America;oveland / Municipal Airport
+252;KSEE;32.82611111111112;-116.9725;Sebring;United States of America;Air Terminal
+253;KHHR;33.922777777777775;-118.335;Hawthorne;United States of America;Hawthorne Municipal Airport
+254;EBAW;51.19;4.462777777777778;Antwerp;Belgium;Deurne
+255;KCRG;30.336388888888887;-81.51444444444445;Jacksonville;United States of America;Craig Municipal Airport
+256;LZIB;48.169999999999995;17.2125;Bratislava;Slovakia;M.R. Stefanika Airport
+257;KSMO;34.01583333333333;-118.45138888888889;Santa Monica;United States of America;Santa Monica Municipal Airport
+258;EDDP;51.42388888888889;12.23611111111111;Leipzig;Germany;Halle
+259;EDFH;49.94972222222222;7.263888888888889;Frankfurt;Germany;Hahn
+260;EGGP;53.33361111111111;-2.8497222222222223;Liverpool;United Kingdom;John Lennon Airport
+261;KMRY;36.58694444444445;-121.84305555555555;Monterey;United States of America;Monterey Peninsula Airport
+262;KCMI;40.03916666666667;-88.27805555555555;Champaign;United States of America;Urbana, University Of Illinois-Willard Airprot
+263;KPNS;30.473055555555554;-87.18722222222223;Pensacola;United States of America;Pensacola Regional Airport
+264;KSQL;37.511944444444445;-122.24944444444445;San Carlos;United States of America;San Carlos Airport
+265;KSYR;43.111111111111114;-76.1061111111111;Syracuse;United States of America;Syracuse Hancock International Airport
+266;KEWB;41.67611111111111;-70.95694444444445;New Bedford;United States of America;w Bedford Regional Airport
+267;CYOW;45.322500000000005;-75.66916666666667;Ottawa;Canada;International
+268;KACY;39.4575;-74.57694444444444;Atlantic City;United States of America;Atlantic City International Airport
+269;KOAR;36.68194444444444;-121.76222222222222;Monterey;United States of America;Fritzsche AAF
+270;CYHU;45.5175;-73.41694444444445;Montreal;Canada;Saint Hubert Airport
+271;KSCK;37.89416666666666;-121.23861111111111;Stockton;United States of America;Stockton Metropolitan Airport
+272;LFLL;45.726111111111116;5.090833333333333;Lyon;France;Saint Exupéry Airport
+273;LSZB;46.913888888888884;7.496944444444445;Berne;Switzerland;Belp Airport
+274;LEPA;39.55;2.7333333333333334;Palma De Mallorca;Spain;Son San Juan
+275;EHEH;51.45;5.374444444444444;Eindhoven;Netherlands;Eindhoven Airport
+276;KRNT;47.49305555555556;-122.21583333333334;Renton;United States of America;Renton Municipal Airport
+277;LFLY;45.72805555555556;4.9447222222222225;Lyon;France;Bron
+278;KWRI;40.01555555555556;-74.5936111111111;Fort Dix;United States of America;Mc Guire AFB
+279;KSBA;34.42611111111111;-119.84027777777777;Santa Barbara;United States of America;Santa Barbara Municipal Airport
+280;EVRA;56.92361111111111;23.97111111111111;Riga;Latvia;International Airport
+281;KPAO;37.461111111111116;-122.115;Palo Alto;United States of America;Palo Alto Airport
+282;LSZR;47.485;9.560555555555556;Altenirhein;Switzerland;St. Gallen-Altenirhein Airport
+283;EDDW;53.0475;8.786666666666667;Bremen;Germany;
+284;KNUQ;37.415;-122.04805555555555;Mountain View;United States of America;Moffett Field
+285;KMOD;37.62555555555556;-120.95416666666667;Modesto;United States of America;Modesto City-County-Sham Field
+286;KPVU;40.21805555555556;-111.72222222222223;Provo;United States of America;
+287;KFWS;32.56527777777777;-97.30805555555555;Fort Worth;United States of America;Spinks Airport
+288;LPFR;37.01416666666667;-7.965833333333333;Faro;Portugal;Faro Airport
+289;KMGM;32.300555555555555;-86.3938888888889;Montgomery;United States of America;Dannelly Field
+290;EDSB;48.77916666666667;8.080555555555556;Karlsruhe;Germany;Baden Baden / Soellinger
+291;UUDD;55.40861111111111;37.90611111111111;Moscow;Russian Federation;Domodedovo
+292;ULLI;59.8;30.265;St Petersburg;Russian Federation;Pulkovo
+293;EDFM;49.472500000000004;8.51361111111111;Neuostheim;Germany;Mannheim / Mannheim Airport
+294;EDMA;48.425;10.931666666666667;Augsburg;Germany;Muhlhausen
+295;KLWC;39.009166666666665;-95.2175;Lawrence;United States of America;Lawrence Municipal Airport
+296;KPGD;26.919722222222223;-81.99027777777778;Punta Gorda;United States of America;Punta Gorda Airport
+297;EGTK;51.83694444444445;-1.32;Oxford;United Kingdom;London Oxford Airport
+298;EDFE;49.96083333333333;8.643611111111111;Egelsbach;Germany;
+299;VHHH;22.30888888888889;113.91444444444446;Hong Kong;Hong Kong;Chek Lap Kok
+300;KGIF;28.06277777777778;-81.75333333333333;Winter Haven;United States of America;Winnter Haven's Gilbert Airport
+301;KMDQ;34.861111111111114;86.55805555555555;Huntsville;United States;Madison County Executive Airport
+302;LIPE;44.534166666666664;11.290277777777778;Bologna;Italy;Guglielmo Marconi
+303;EPPO;52.42111111111111;16.82638888888889;Poznan;Poland;Lawica
+304;KMHT;42.9325;-71.43555555555555;Manchester;United States of America;Manchester Airport
+305;OTHH;25.273055555555555;51.60805555555556;Doha;Qatar;Hamad International Airport
+306;LEZL;37.41777777777777;-5.893055555555555;Seville;Spain;San Pablo
+307;YSSY;-33.94611111111111;151.1772222222222;Sydney;Australia;Kingsford Smith
+308;EDLW;51.518055555555556;7.612222222222222;Dortmund;Germany;Wickede
+309;LGIR;35.339444444444446;25.18027777777778;Heraklion;Greece;Iraklio - Nikos Kazantzakis
+310;KTYR;32.35388888888889;-95.40222222222222;Tyler;United States of America;Tyler Pounds Field
+311;EGPF;55.871944444444445;-4.433055555555556;Glasgow;United Kingdom;International
+312;LIEO;40.89861111111111;9.5175;Olbia;Italy;Costa Smeralda
+313;KAND;34.495;-82.70916666666668;Anderson;United States of America;Anderson County Airport
+314;KOXC;41.478611111111114;-73.13527777777779;Oxford;United States of America;Waterbury-Oxford
+315;CYKF;43.45888888888889;-80.38444444444445;Kitchener;Canada;Kitchener-Waterloo Regional Airport
+316;EDVE;52.31916666666667;10.556111111111111;Braunschweig;Germany;
+317;KLBB;33.66361111111111;-101.82277777777777;Lubbock;United States of America;Preston Smith International
+318;KVAY;39.94277777777778;-74.84583333333333;Mount Holly, South Jersey Regional Airport, NJ;United States of America;
+319;EDLN;51.23027777777778;6.504444444444444;Dusseldorf;Germany;Monchen-Gladbach - Dusseldorf Express
+320;KTMB;25.647777777777776;-80.43277777777779;Miami;United States of America;Kendall-Tamiami Executive Airport
+321;LFPV;48.774166666666666;2.2013888888888893;Villacoublay;France;Villacoublay-Velizy Air Base
+322;KSDM;32.57222222222222;-116.98027777777779;San Diego;United States of America;Brown Field Municipal Airport
+323;CYTZ;43.6275;-79.39611111111111;Toronto;Canada;Toronto Island
+324;EGMC;51.57138888888889;0.6955555555555556;Southend-On-Sea;United Kingdom;London Southend Airport
+325;KSBD;34.09527777777778;-117.235;San Bernardino;United States of America;Norton AFB
+326;LYBE;44.818333333333335;20.30888888888889;Belgrade;Serbia;Beograd - Surèin
+327;KPYM;41.909166666666664;-70.72888888888889;Plymouth;United States of America;Plymouth Municipal Airport
+328;LGRP;36.405277777777776;28.08611111111111;Rhodes;Greece;Diagoras / Paradisi
+329;KSTC;45.54666666666667;-94.06;St Cloud;United States of America;St Cloud Municipal Airport
+330;KFAY;34.99111111111111;-78.88027777777778;Fayetteville;United States of America;Fayetteville Regional Airport
+331;EDJA;47.98888888888889;10.239444444444443;Memmingen;Germany;Allgaeu
+332;ESSB;59.35416666666667;17.941388888888888;Stockholm;Sweden;Bromma
+333;KLWM;42.717222222222226;-71.12333333333332;Lawrence;United States of America;Lawrence Municipal Airport
+334;LEAL;38.28194444444444;-0.5580555555555556;Alicante;Spain;El Altet
+335;LFLB;45.63777777777778;5.880000000000001;Chambery;France;Aix-Les-Bains
+336;EDAZ;52.20333333333333;13.158333333333333;Schoenhagen;Germany;Schonhagen
+337;ESGG;57.66277777777778;12.279722222222222;Goteborg;Sweden;Landvetter
+338;EDRY;49.302499999999995;8.45111111111111;Speyer;Germany;Speyer
+339;KLCK;39.81361111111111;-82.92777777777778;Columbus;United States of America;Rickenbacker Angb
+340;LMML;35.85722222222223;14.477500000000001;Malta;Malta;International Airport
+341;EGLC;51.505;0.05416666666666667;London;United Kingdom;London City Airport
+342;LTFJ;40.89833333333333;29.309166666666666;Istanbul;Turkey;Sabiha Gökçen International Airport
+343;EDDG;52.13444444444444;7.684722222222223;Muenster;Germany;Osnabrueck
+344;EHBK;50.91138888888889;5.77;Maastricht;Netherlands;Maastricht Aachen
+345;LROP;44.57361111111111;26.103333333333335;Bucharest;Romania;Otopeni International
+346;KRIV;33.88055555555555;-117.25944444444444;Riverside;United States of America;March AFB
+347;KPRC;34.654444444444444;-112.41944444444445;Prescott;United States of America;Love Field
+348;KDEC;39.83444444444444;-88.86555555555555;Decatur;United States of America;Decatur Airport
+349;OMDW;24.918055555555558;55.17527777777777;Dubai;United Arab Emirates;Al Maktoum International Airport
+350;KZPH;28.228055555555553;-82.15583333333333;Zephyrhills;United States of America;
+351;EDDC;51.1325;13.766944444444444;Dresden;Germany;Klotzsche
+352;KTOA;33.80333333333333;-118.33972222222222;Torrance;United States of America;Torrance Municipal
+353;EPGD;54.3775;18.46611111111111;Gdansk;Poland;Rebiechowo
+354;EDMO;48.081388888888895;11.283333333333333;Oberpfaffenhofen;Germany;
+355;VIDP;28.56638888888889;77.10305555555556;New Delhi;India;Indira Gandhi International Airport
+356;KSUU;38.2625;-121.92722222222223;Fairfield;United States of America;Travis AFB
+357;TXKF;32.36416666666667;-64.67861111111111;Bermuda;Bermuda;L.F.Wade International Airport
+358;KDLL;43.52166666666667;-89.77083333333333;Dillon;United States of America;
+359;LIPX;45.39555555555555;10.888333333333334;Verona;Italy;Villafranca
+360;KMCF;27.849166666666665;-82.52111111111111;Tampa;United States of America;Mac Dill AFB
+361;RKSI;37.469166666666666;126.45055555555555;Seoul;Korea, Republic of;Incheon International Airport
+362;KWHP;34.25944444444445;-118.41333333333334;Los Angeles;United States of America;Whiteman
+363;EGHH;50.78;-1.8425000000000002;Bournemouth;United Kingdom;International
+364;KRAC;42.760555555555555;-87.81527777777778;Racine;United States of America;Batten International Airport
+365;LPAR;38.88305555555556;-9.030000000000001;Alverca;Portugal;
+366;KTIK;35.414722222222224;-97.3863888888889;Oklahoma City;United States of America;Tinker AFB
+367;EDVK;51.40833333333333;9.377500000000001;Kassel;Germany;Calden
+368;LFPN;48.751666666666665;2.1061111111111113;Toussus Le Noble;France;Toussus Le Noble Airport
+369;KSKF;29.384166666666665;-98.58083333333333;San Antonio;United States of America;Kelly AFB
+370;LOWG;47.0;15.433333333333334;Graz;Austria;Thalerhof
+371;KCTY;29.635555555555555;-83.10472222222222;Cross City;United States of America;Cross City Airport
+372;KSMQ;40.626111111111115;74.67027777777778;Somerville;United States;Somerset Airport
+373;KFKL;41.37777777777778;-79.86027777777777;Franklin;United States of America;Chess-Lambertin
+374;KDVO;38.14361111111111;122.55611111111111;Novato;United States;Gnoss Field Airport
+375;LSZA;46.00416666666667;8.910555555555556;Lugano;Switzerland;
+376;KAEG;35.144999999999996;-106.795;Albuquerque;United States of America;Double Eagle II Airport
+377;KTTD;45.54944444444444;-122.40138888888889;Portland;United States of America;Portland-Troutdale Airport
+378;LKVO;50.21638888888889;14.395555555555555;Prague;Czech Republic;Vodochody Airport
+379;KRIR;33.98888888888889;-117.41000000000001;Riverside;United States of America;Riverside Fla-Bob
