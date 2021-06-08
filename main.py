@@ -229,7 +229,7 @@ st.markdown("""Выкинем также все связки между аэро
 Можно было бы поставить отсечку поменьше, но тогда граф будет слишком нечитаемый - точки будут неразличимы друг от друга.
 С другой библиотекой (не `networkx`, а `Gephi`) было бы лучше.""")
 
-with st.echo(code_location="below"):
+"""with st.echo(code_location="below"):
     df_fl_graph = df_fl.copy()
     df_fl_graph = df_fl_graph[df_fl_graph['destination'] != "NULL"]
     df_fl_graph = df_fl_graph[df_fl_graph['departure'] != "NULL"]
@@ -257,7 +257,7 @@ with st.echo(code_location="below"):
             width=0.1)
     fig = plt.plot()
     st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.pyplot(fig)
+    st.pyplot(fig)"""
 
 st.markdown("Видно, что 5 узловых аэропортов - это EGLL (Heathrow, London), EDDF (Franfkfurt), KORD (O'Hare, Chicago), KDFW (Dallas-Fort Worth), KLAX (Los Angeles). Интуиция плюс-минус не подвела :)")
 
