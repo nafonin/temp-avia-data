@@ -266,6 +266,7 @@ st.markdown("### Самые крупные аэропорты на карте-1"
 st.markdown("Давай посмотрим, где находятся 10 крупнейших аэропортов мира (по количеству рейсов)")
 
 with st.echo(code_location="below"):
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     df1 = pd.read_csv("major_airports.csv", sep=';').drop("Unnamed: 0", axis=1)
     df2 = pd.read_csv("major_airports_data.csv", sep=';').drop("Unnamed: 0", axis=1)
     df = df2.join(df1.set_index("airport"), on='airport').drop(columns=['departure', 'destination'])
