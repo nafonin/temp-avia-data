@@ -1,18 +1,15 @@
 import streamlit as st
 import pandas as pd
 import geopandas as gpd
-import plotly.graph_objects as go
 import plotly.express as px
 import matplotlib.pyplot as plt
-import networkx as nx
 import numpy as np
-import altair as alt
 
 st.title("Анализ данных авиаиндустрии")
 
 st.markdown("Привет!")
 st.markdown("В этом проекте я буду анализировать данные авиаиндустрии: по перелётам, самолётам и аэропортам.")
-st.markdown("Это первая часть анализа, выполненная в питоне. Чтобы увидеть вторую часть (R), пройди по ссылке **PLACEHOLDER**.")
+st.markdown("Это первая часть анализа, выполненная в питоне. Чтобы увидеть вторую часть (R), пройди по ссылке avia-project-knn.heroku.com.")
 
 st.markdown("Список использованных технологий:")
 st.markdown("1. Pandas")
@@ -27,8 +24,8 @@ st.markdown("Во второй части проекта использован�
 st.markdown("9. R")
 st.markdown("10. Machine Learning (kNN)")
 st.markdown("11. Ggplot2, продвинутое использование с многослойными картинками")
-st.markdown("12. Дополнения к ggplot2")
-st.markdown("Всего строк кода порядка *XXX*")
+st.markdown("12. Дополнение ggiraph к ggplot2")
+st.markdown("Всего строк кода порядка 130 в Python и 80 в R")
 st.markdown("Весь проект - единое целое")
 st.markdown("И, конечно, он крутой!")
 
@@ -90,7 +87,7 @@ st.markdown("## 2. Выгрузка данных по авиаперелётам
 st.markdown("Возьмём данные за 2019 год. Это достаточно длинный период времени, к тому же не искажённый пандемией.")
 st.markdown("Всего в таблице `flights` 118 714 936 записей, а за 2019 год - 32 088 373. Это довольно много, heroku такое не вывезет. Поэтому сделаем несколько файлов с нужными агрегациями.")
 st.markdown("Считаем количество перелетов по каждой (упорядоченной) паре аэропортов")
-st.markdown("Исполняем SQL-запрос (использован **SQL** - не забудь поставить за это 1 балл):")
+st.markdown("Исполняем SQL-запрос:")
 st.markdown("""`select
 departure, destination, count(icao24)
 from flights
@@ -211,7 +208,7 @@ for airport in airports[1:]:
 df.to_csv("major_airports_data.csv", sep=';')
 """)
 
-st.markdown("Парсер нашё данные только по 401 аэропорту. Остальные аэропорты, видимо, слишком маленькие, и их нет в базе на том сайте.")
+st.markdown("Парсер нашёл данные только по 401 аэропорту. Остальные аэропорты, видимо, слишком маленькие, и их нет в базе на том сайте.")
 
 with st.echo():
     df_ap = pd.read_csv("major_airports_data.csv", sep=';')
@@ -228,8 +225,11 @@ st.markdown("Выкинем все перелёты, где одна из дву
 st.markdown("""Выкинем также все связки между аэропортами, где меньше 1460 перелётов в год в каждую сторону (по 4 в неделю).
 Можно было бы поставить отсечку поменьше, но тогда граф будет слишком нечитаемый - точки будут неразличимы друг от друга.
 С другой библиотекой (не `networkx`, а `Gephi`) было бы лучше.""")
+st.markdown("Подружить библиотеку для отрисовки `networkx` (`pygraphviz`) с Heroku довольно непросто. Поэтому я прилагаю код, который запустил локально, и скриншот графа.")
 
-"""with st.echo(code_location="below"):
+st.image("networkx-graph.png")
+
+st.code("""
     df_fl_graph = df_fl.copy()
     df_fl_graph = df_fl_graph[df_fl_graph['destination'] != "NULL"]
     df_fl_graph = df_fl_graph[df_fl_graph['departure'] != "NULL"]
@@ -257,7 +257,8 @@ st.markdown("""Выкинем также все связки между аэро
             width=0.1)
     fig = plt.plot()
     st.set_option('deprecation.showPyplotGlobalUse', False)
-    st.pyplot(fig)"""
+    st.pyplot(fig)
+""")
 
 st.markdown("Видно, что 5 узловых аэропортов - это EGLL (Heathrow, London), EDDF (Franfkfurt), KORD (O'Hare, Chicago), KDFW (Dallas-Fort Worth), KLAX (Los Angeles). Интуиция плюс-минус не подвела :)")
 
@@ -329,138 +330,21 @@ for i in range(190):
 df_fetched.to_csv("aircraft_data.csv", sep=';')
 """)
 
-st.markdown("Вот код этой части целиком. Я посчитал строчки, их уже около 130. А ещё есть часть в R :)")
+st.markdown("""В датасете, который мы собрали через API, есть icao24-коды самолётов, дата изготовления и модель.
+Нужно собрать ещё один численный параметр - например, среднюю длительность полёта. Заберём его из OpenSky Network c
+помощью SQL-запроса:""")
+st.markdown("`SELECT icao24, avg(duration) from flights where firstseen >= '2019' and lastseen < '2020' group by icao24`")
+st.markdown("Осталось только связать два последних датасета между собой.")
+st.markdown("Поскольку это нужно для R, а R лежит в другом приложении, я делаю это локально, а код просто копирую сюда, чтобы был.")
+
 st.code("""
-def parse_hadoop_output(filename):
-    f = open(filename, "r")
-    for i, line in enumerate(f):
-        if i == 1:
-            header = parse_line(line)
-            ncolumns = len(header)
-            columns_data = dict.fromkeys(header, 0)
-        elif len(line) == 1:
-            continue
-        elif line[1] != "-":
-            content = parse_line(line)
-            if content != header:
-                if columns_data[header[0]] == 0:
-                    for ncol in range(ncolumns):
-                        columns_data[header[ncol]] = [content[ncol],]
-                    continue
-                for ncol in range(ncolumns):
-                    columns_data[header[ncol]].append(content[ncol])
-    f.close()
-    df = pd.DataFrame(data=columns_data).rename(columns={'count(icao24)': 'count'})
-    return df
-def parse_line(line):
-    content = [x.strip(" ") for x in line.strip("|").split("|")][:-1]
-    return content
-df_fl = parse_hadoop_output("flights_by_airports.txt")
-df_fl[:5]
-st.write(df_fl["departure"].nunique())
-driver=Chrome("/Users/afonin/PycharmProjects/temp-avia-data/chromedriver")
-def get_info(icao):
-    driver.get("https://www.avcodes.co.uk/aptcodesearch.asp")
-    driver.find_element_by_name('icaoapt').send_keys(icao)
-    driver.find_element_by_name('B1').click()
-    lon = driver.find_element(By.XPATH, "//*[contains(text(), 'Longitude:')]").get_attribute("innerHTML").splitlines()
-    lat = driver.find_element(By.XPATH, "//*[contains(text(), 'Latitude:')]").get_attribute("innerHTML").splitlines()
-    name = driver.find_element_by_class_name('tablebg').get_attribute("innerHTML").splitlines()
-    country = driver.find_element(By.XPATH, "//*[contains(text(), 'Country:')]").get_attribute("innerHTML").splitlines()
-    lon = lon[0][14:]
-    if lon[-1] == "W":
-        lon = -(int(lon[:3]) + int(lon[4:6])/60 + int(lon[7:9])/3600)
-    else:
-        lon = int(lon[:3]) + int(lon[4:6]) / 60 + int(lon[7:9]) / 3600
-    lat = lat[0][13:]
-    if lat[-1] == "S":
-        lat = -((int(lat[:3]) + int(lat[4:6])/60 + int(lat[7:9])/3600))
-    else:
-        lat = int(lat[:3]) + int(lat[4:6]) / 60 + int(lat[7:9]) / 3600
-    city = name[0].strip('&nbsp;').split(' / ')[0]
-    name = name[0][name[0].find('/')+2:].replace('&nbsp;', '')
-    country = country[0].split('<br>')[1]
-    return [lat, lon, city, name, country]
-df = pd.read_csv("major_airports.csv", sep=';')
-airports = df.airport.to_list()
-df = pd.DataFrame(columns=['airport', 'lat', 'lon'])
-cnt = 0
-for airport in airports[1:]:
-    try:
-        lat, lon, city, name, country = get_info(airport)
-        if (country == "United States of America") and (lon > 0):  # фиксю баг сайта
-            lon = -lon
-        df = df.append({'airport': airport, 'lat': lat, 'lon': lon, 'name': name, 'city': city, 'country': country},
-                       ignore_index=True)
-    except:
-        cnt += 1
-        print(f"{cnt}. {airport}")
-df.to_csv("major_airports_data.csv", sep=';')
-df_ap = pd.read_csv("major_airports_data.csv", sep=';')
-st.write(df_ap[:5])
-df_fl_graph = df_fl.copy()
-df_fl_graph = df_fl_graph[df_fl_graph['destination'] != "NULL"]
-df_fl_graph = df_fl_graph[df_fl_graph['departure'] != "NULL"]
-df_fl_graph = df_fl_graph[df_fl_graph.departure != df_fl_graph.destination]
-df_fl_graph['a1'] = df_fl_graph[['destination', 'departure']].min(axis=1)
-df_fl_graph['a2'] = df_fl_graph[['destination', 'departure']].max(axis=1)
-df_fl_graph.drop(['departure', 'destination'], inplace=True, axis=1)
-df_fl_graph['count'] = df_fl_graph['count'].astype(int)
-df_fl_graph = df_fl_graph[df_fl_graph['count'] >= 365*4]
-df_fl_graph = df_fl_graph.groupby(['a1', 'a2']).sum().reset_index()
-G = nx.from_pandas_edgelist(df_fl_graph, source='a1', target='a2', edge_attr="count")
-degrees = sorted(G.degree, key=lambda x: x[1], reverse=True)
-top_nodes = [x[0] for x in degrees[:5]]
-other_nodes = [x[0] for x in degrees[5:]]
-plt.plot(1)
-nx.draw(G, node_size=[5, ]*len(other_nodes) + [300, ]*5,
-        pos=nx.nx_agraph.graphviz_layout(G, prog="fdp"),
-        node_color=['blue', ]*len(other_nodes) + ['orange', ]*5,
-        nodelist=other_nodes + top_nodes,
-        edge_color='grey',
-        labels=dict(zip(top_nodes, top_nodes)),
-        alpha=0.85,
-        font_size=4,
-        font_family='helvetica',
-        width=0.1)
-fig = plt.plot()
-st.set_option('deprecation.showPyplotGlobalUse', False)
-st.pyplot(fig)
-df1 = pd.read_csv("major_airports.csv", sep=';').drop("Unnamed: 0", axis=1)
-df2 = pd.read_csv("major_airports_data.csv", sep=';').drop("Unnamed: 0", axis=1)
-df = df2.join(df1.set_index("airport"), on='airport').drop(columns=['departure', 'destination'])
-df['total'] = df.total.astype('int32')
-df_slice = df.sort_values(by=['total'], ascending=False)[:10]
-gdf = gpd.GeoDataFrame(df_slice, geometry=gpd.points_from_xy(df_slice.lon, df_slice.lat))
-world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
-ax = world.plot(facecolor='w', edgecolor='k')
-plt.plot(2)
-gdf.plot(markersize=np.square(gdf['total'])/1000000, ax=ax)
-fig2 = plt.plot()
-st.pyplot(fig2)
-df = df.sort_values(by=['total'], ascending=False)[:100]
-fig3 = px.scatter_geo(df, lat='lat', lon='lon', size=df['total']/1000, color='country',
-                      hover_data=['country', 'city', 'name', 'total'],
-                      hover_name='name', opacity=0.7, scope='world', title='Крупнейшие аэропорты',
-                      basemap_visible=True)
-st.write(fig3)
-def execute_request(API_key, entrypoint, offset):
-    url = entrypoint + f"&offset={offset}"
-    r = rq.get(url)
-    j = r.json()
-    data = j['data']
-    df = pd.DataFrame(data)
-    return df
-API_key = "YOUR_API_KEY"  # если хочешь, можешь получить свой ключ на сайте
-entrypoint = f"http://api.aviationstack.com/v1/airplanes?access_key={API_key}"
-for i in range(190):
-    try:
-        df = execute_request(API_key=API_key, entrypoint=entrypoint, offset=i*100)
-    except:
-        print(i)
-    if i == 0:
-        df_fetched = df.copy()
-    else:
-        df_fetched = df_fetched.append(df, ignore_index=True)
-df_fetched.to_csv("aircraft_data.csv", sep=';')
+df_fld = parse_hadoop_output("avg_flight_duration.txt")
+df_fld['icao24'] = df_fld['icao24'].apply(lambda x: x.upper())
+df_ac = pd.read_csv("aircraft_data.csv", sep=';')
+df_ac = df_ac[['icao_code_hex', 'iata_type', 'first_flight_date']]
+df = df_ac.join(df_fld.set_index('icao24'), on='icao_code_hex', how='inner')
+df.rename(columns={'avg(duration)': 'avg_duration'}, inplace=True)
+df.to_csv("knn_data.csv", sep=';')
 """)
+
+st.markdown("Всего часть с питоном занимает около 130 строчек. А ещё есть часть в R, так что 120 строк я точно набираю :)")

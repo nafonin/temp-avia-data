@@ -9,17 +9,169 @@ output: html_notebook
 
 Соседи определяются как ближайшие точки по какой-нибудь метрике дистанции (например, Евклидовой метрике) в пространстве признаков. Признаки, само собой, нужно отнормировать (достаточно к единичной дисперсии, но каноничнее ещё и к нулевому среднему), чтобы признак с большой выборочной дисперсией не имел слишком большой вес в метрике дистанции.
 
-Оптимальный параметр $k$ выбирается, например, методом кросс-валидации. Есть много вариаций кросс-валидации, из которых я выбрал k-fold cross-validation (здесь k не связано с параметром модели kNN). От всех точек берётся 80%, которые будут training sample, а оставшиеся 20% - testing sample. Процесс повторяется 5 раз (в итоге каждая точка ровно 1 раз будет в testing sample).
+Только каким должен быть $k$? Слишком маленьким не хочется - модель будет слишком чувствительна к маленьким случайным вкраплениям одного класса среди множества точек другого. Слишком большое значение - тоже плохо: модель будет слишком чувствительна к удалённым точкам.
+
+Есть несколько способов обоснованно выбрать $k$ - например, методом кросс-валидации. Есть много вариаций кросс-валидации, из которых я выбрал k-fold cross-validation (здесь k не связано с параметром модели kNN). Берётся како-то значение параметра $k$ в kNN. От всех точек берётся 80%, которые будут training sample, а оставшиеся 20% - testing sample. На testing sample считается метрика качества (точность классификации). Процесс повторяется 5 раз (в итоге каждая точка ровно 1 раз будет в testing sample). Берётся среднее от метрики качества. Так делается для некоторого набора значений $k$, и у какого значения качество лучше - то и оптимальное.
+
+Сначала приведём данные в порядок. Прочитаем файл, удалим битые строки и вытащим возраст судна из даты его первого полёта.
 
 ```{r}
-df <- read.csv("")
+df = read.csv("knn_data.csv", sep=';')
+df = df[df$first_flight_date != "", ]
+for (i in 1:nrow(df)) {
+  
+  y = strtoi(substr(df$first_flight_date[i], 1, 4))
+  
+  m = substr(df$first_flight_date[i], 6, 7)
+  if (substr(m, 1, 1) == "0") {
+    m = substr(m, 2, 2)
+  }
+  m = strtoi(m)
+  
+  d = substr(df$first_flight_date[i], 9, 10)
+  if (substr(d, 1, 1) == "0") {
+    d = substr(d, 2, 2)
+  }
+  d = strtoi(d)
+  
+  age <- (2021 - y) * 365 + (6 - m) * 30 + (8 - d)
+  
+  df$age_d[i] = age
+}
+
+sort(table(df$iata_type), decreasing = TRUE)
 ```
 
-
+Выберем какие-нибудь классы самолётов (для простоты небольшой количество - скажем, три). Например, B737-700 (одно из поколений Boeing 737), A330-300 (одно из поколений Airbus 319), B777-300 (одно из поколений Boeing 777).
 
 ```{r}
-normalize <- function(df) {
-  
+planes <- c("B777-300", "B737-700", "A330-300")
+df1 = df[is.element(df$iata_type, planes), ]
+df1
+```
+
+Как выглядят данные?
+
+```{r}
+library(ggplot2)
+ggplot(df1, aes(x=age_d, y=avg_duration)) + geom_point(aes(color=iata_type))
+```
+Это хороший сеттинг для kNN: с одной стороны, есть различимые кластеры, поэтому алгоритм сможет обеспечить адекватную точность; с другой стороны, нет четких границ этих кластеров, поэтому задача не кажется слишком простой.
+
+Напишем функцию для рандомного распределения выборки на разные группы кросс-валидации.
+
+```{r}
+split_sample <- function(x) {
+  s = sample(seq(1, nrow(x)))
+  x$group = s %% 5 + 1
+  return(x)
+}
+
+df1 = split_sample(df1)
+df1
+```
+
+Напишем функцию для нормирования выборки (нормировать будем на основе статистических параметров training set).
+
+```{r}
+normalize_data <- function(x, group) {
+  train = x[x$group != group,]
+  x$age_d = (x$age_d - mean(train$age_d)) / sd(train$age_d)
+  x$avg_duration = (x$avg_duration - mean(train$avg_duration)) / sd(train$avg_duration)
+  return(x)
+}
+
+normalize_data(df1, 1)
+```
+
+Напишем функцию, классифицирующую точку по её соседям.
+
+```{r}
+dist_matrix = as.matrix(dist(normalize_data(df1, 0)[c("age_d", "avg_duration")], diag=TRUE, upper=TRUE))
+
+classify <- function(x, k, g) {
+  predicted = rep(0, nrow(x[x$group == g,]))
+  for (i in 1:nrow(x[x$group == g,])) {
+    d = dist_matrix[i,]
+    d[x$group == g] = 10000
+    ix = sort(d, index.return=TRUE)$ix[1:k]
+    types = x[ix,]$iata_type
+    t = sort(table(types), decreasing=TRUE)
+    if (length(t) == 1) {
+      predicted[i] = names(t[1])
+    } 
+    else if (t[1] > t[2]) {
+      predicted[i] = names(t[1])
+    }
+    else if (length(t) == 2) {
+      r = runif(1, min=1, max=2)
+      predicted[i] = names(t[r])
+    }
+    else if (t[2] > t[3]) {
+      r = runif(1, min=1, max=2)
+      predicted[i] = names(t[r])
+    }
+    else {
+      r = runif(1, min=1, max=3)
+      predicted[i] = names(t[r])
+    }
+  }
+  return(predicted)
 }
 ```
 
+Напишем функцию, оценивающую точность классификации для какого-то $k$.
+
+```{r}
+accuracy <- function(x, k) {
+  correct <- rep(0, 5)
+  for (group in 1:5) {
+    actual = x[x$group == group,]$iata_type
+    predicted = classify(normalize_data(df1, group), k, group)
+    correct[group] = sum(actual == predicted)
+  }
+  return(sum(correct) / nrow(x))
+}
+```
+
+Посчитаем метрику точности модели для $k$ от 1 до 200 (200 - это много, считаться будет долго).
+
+```{r}
+goodness = rep(0, 200)
+for (k in 1:200) {
+  goodness[k] = accuracy(df1, k)
+}
+```
+
+Построим график зависимости качества классификации от значения параметра $k$.
+
+```{r}
+dfk = data.frame(k=seq(1,200), fit=goodness)
+ggplot(dfk, aes(x=k, y=fit)) + geom_line()
+```
+
+Видно, что поначалу точность модели растёт вместо со сложностью: чем больше точек принимается в расчёт, тем лучше предсказательная сила. Но со временем наступает некая стагнация: далёкие точки несут мало ценности в плане точности, поэтому точность фиксируется около 40%. Оптимальным кажется значение $k=41$: оно и дает хорошую точность, и не выглядит неадекватно большим.
+
+Построим разбиение пространства признаков на три класса при $k=41$. Для наглядности 20% выборки сделаем test set.
+
+```{r}
+library(ggiraph)
+
+age_d = df1[df1$group == 1, ]$age_d
+duration = df1[df1$group == 1, ]$avg_duration
+iata_type = df1[df1$group == 1, ]$iata_type
+icao_code_hex = df1[df1$group == 1, ]$icao_code_hex
+iata_type_pr = classify(normalize_data(df1, 1), 41, 1)
+df_plot = data.frame(age_d=age_d, duration=duration, iata_type_pr=iata_type_pr, iata_type=iata_type, icao_code_hex=icao_code_hex)
+
+get_hull = function(x) {
+  return(x[chull(x$age_d, x$duration), ])
+}
+
+bounds = ddply(df_plot, .fun=get_hull, .variables='iata_type_pr')
+gg = ggplot(df_plot, aes(age_d, duration, color=iata_type_pr, fill=iata_type_pr)) + geom_polygon(data=bounds, aes(age_d, duration), alpha=0.1) + geom_point_interactive(size=3, tooltip=iata_type, data_id=icao_code_hex) + theme_minimal()
+girafe(ggobj=gg)
+```
+Полигоны обозначают области, в которых содержатся точки с какой-то предсказанной моделью самолёта. Например, в зеленой области содержатся все точки, про которые модель сказала, что они соответствуют Boeing 737. Хотя предсказание может быть неточным: при наведении на точку будет показана истинная модель самолёта. На графике видно, что кластеры сильно пересекаются, что объясняет невысокую метрику качества модели.
+
+Здесь использовано несколько слоёв графика (базовый фон, точки и многоугольники), а также ggplot2 extension под названием ggiraph. Не забудь всё это отметить при грейдинге :)
